@@ -14,3 +14,18 @@ if (document.onWayTo === null) {
  window.scroll(0, sections[destIndex].offsetTop);
  }
 }
+
+
+sections.forEach((section,index) => {
+if(window.pageYOffset === section.OffsetTop){
+document.lastCentered = index;
+section.className = 'active';
+if(document.onWayTo === index) {
+   document.onWaYTo === null;
+}
+} else{
+    section.className = '';
+}
+})
+document.lastScrollPosition = window.pageYOffset;
+})
