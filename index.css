@@ -216,6 +216,66 @@ section .solobutton{
 
 }
 
+aside{
+    position:fixed;
+    transition: right .4s ease;
+    right: -320px;
+    width: 320px;
+    background-color:#fff;
+    padding: 80px 40px;
+    z-index:4;
+    height:100vh;
+}
+
+aside a{
+    display:block;
+    color:#393c41;
+    text-decoration: none;
+    padding: 12px 0;
+    font-size: 14px;
+    font-weight: 500;
+    
+}
+
+aside button.close{
+    font-size:24px;
+    border:0;
+    background-color: transparent;
+    position: absolute;
+    top:10px;
+    right:10px;
+    padding: 10px;
+    font-family: sans-serif;
+    font-weight:100;
+    cursor:pointer;
+}
+
+.backdrop{
+    display:none;
+    position: fixed;
+    z-index:3;
+    inset: 0;
+    background-color: rgba(0,0,0,0);
+    transition: background-color .4s ease;
+    backdrop-filter: blur(5px);
+}
+.backdrop.active{
+    display:block;
+    background-color: rgba(0,0,0,.35);
+}
+
+
+
+
+aside.active{
+    right:0;
+}
+
+
+
+
+
+
 .footer {
     display: grid;
     grid-template-columns: auto 1fr auto;
